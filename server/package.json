@@ -1,7 +1,7 @@
 {
-  "name": "todolistapi",
+  "name": "StickyNotes",
   "version": "1.0.0",
-  "description": "RESTful todoListApi",
+  "description": "RESTful StickyNotes API",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -9,19 +9,19 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/generalgmt/RESTfulAPITutorial.git"
+    "url": "git+https://github.com/ngdanghau/StickyNotes.git"
   },
   "keywords": [
     "RESTful",
     "API",
-    "Tutorial"
+    "StickyNotes"
   ],
   "author": "olatunde garuba",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/generalgmt/RESTfulAPITutorial/issues"
+    "url": "https://github.com/ngdanghau/StickyNotes/issues"
   },
-  "homepage": "https://github.com/generalgmt/RESTfulAPITutorial#readme",
+  "homepage": "https://github.com/ngdanghau/StickyNotes#readme",
   "devDependencies": {
     "nodemon": "^1.11.0"
   },
