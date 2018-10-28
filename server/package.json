@@ -1,5 +1,5 @@
 {
-  "name": "StickyNotes",
+  "name": "sticky-notes",
   "version": "1.0.0",
   "description": "RESTful StickyNotes API",
   "main": "index.js",
