@@ -104,6 +104,7 @@ class NoteList extends Component {
                 });
             }else if(this.props.type == "ADD_NOTE"){
                 this.props.notes.unshift(this.props.note);
+                this.props.updateNote(this.props.note);
             }else if(this.props.type == "REMOVE_NOTE"){
                 this.props.notes.splice(this.props.notes.findIndex(e => e._id === this.props.note._id),1);
             }else if( this.props.type == "CHANGE_COLOR_NOTE"){
