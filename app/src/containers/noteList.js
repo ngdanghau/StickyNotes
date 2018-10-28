@@ -7,8 +7,7 @@ import {CopyToClipboard} from 'react-copy-to-clipboard';
 const mapStateToProps = state => {
     return {
         notes: state.notes.notes,
-        note: state.notes.note,
-        type: state.notes.type
+        note: state.notes.note
     }
 }
 
@@ -95,36 +94,7 @@ class NoteList extends Component {
          });
     }
     renderList() {
-       if(this.props.note){
-           if(this.props.type == "COMPLETED_NOTE"){
-                this.props.notes.map((item) => {
-                    if(item._id == this.props.note._id){
-                        item.completed = this.props.note.completed;
-                    }
-                });
-            }else if(this.props.type == "ADD_NOTE"){
-                this.props.notes.unshift(this.props.note);
-                this.props.updateNote(this.props.note);
-            }else if(this.props.type == "REMOVE_NOTE"){
-                this.props.notes.splice(this.props.notes.findIndex(e => e._id === this.props.note._id),1);
-            }else if( this.props.type == "CHANGE_COLOR_NOTE"){
-                this.props.notes.map((item) => {
-                    if(item._id == this.props.note._id){
-                        item.color = this.props.note.color;
-                    }
-                });
-            }else if(this.props.type == "UPDATE_NOTE"){
-                this.props.notes.map((item) => {
-                    if(item._id == this.props.note._id){
-                        item.title = this.props.note.title;
-                        item.text = this.props.note.text;
-                        item.completed = this.props.note.completed;
-                        item.color = this.props.note.color;
-                        item.long = this.props.note.long;
-                    }
-                });
-            }
-       }
+       if(this.props.note) this.props.loadNotes();
        return this.props.notes.map((item) => {
             return(
                 <div key={item._id} className="col-md-4 col-sm-6">
