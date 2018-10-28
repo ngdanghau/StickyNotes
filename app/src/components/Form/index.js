@@ -34,7 +34,7 @@ class Form extends Component {
         if(this.state.title && this.state.text){
             this.props.addNote(item);
             this.setState({
-                isOpen: !this.state.isOpen,
+                isOpen: false,
                 isSelected: "white",
                 title: '',
                 text: '',
