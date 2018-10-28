@@ -88,11 +88,7 @@ class NoteList extends Component {
         }
     }
     editColor = (note, color) => {
-        this.props.notes.map((item) => {
-            if(item._id == note._id){
-                item.color = color;
-            }
-        });
+        this.props.changeColorNote(note._id,color);
         this.setState({ 
             color: color,
             isOpen: !this.state.isOpen
