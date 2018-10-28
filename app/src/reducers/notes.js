@@ -1,7 +1,6 @@
 const initialState = {
     notes: [],
-    note: {},
-    type: ""
+    note: {}
 }
 export default (state=initialState, action) => {
     switch (action.type) {
@@ -18,32 +17,27 @@ export default (state=initialState, action) => {
         case 'COMPLETED_NOTE':
         return {
             ...state,
-            note: action.note,
-            type: "COMPLETED_NOTE"
+            note: action.note
         }
         case 'CHANGE_COLOR_NOTE':
         return {
             ...state,
-            note: action.note,
-            type: "CHANGE_COLOR_NOTE"
+            note: action.note
         }
         case 'ADD_NOTE':
         return {
             ...state,
-            note: action.note,
-            type: "ADD_NOTE"
+            note: action.note
         }
         case 'UPDATE_NOTE':
         return {
             ...state,
-            note: action.note,
-            type: "UPDATE_NOTE"
+            note: action.note
         }
         case 'REMOVE_NOTE':
         return {
             ...state,
-            note: action.note,
-            type: "REMOVE_NOTE"
+            note: action.note
         }
         default:
             return state
