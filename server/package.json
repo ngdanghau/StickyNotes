@@ -23,7 +23,8 @@
   },
   "homepage": "https://github.com/ngdanghau/StickyNotes#readme",
   "devDependencies": {
-    "nodemon": "^1.11.0"
+    "nodemon": "^1.11.0",
+    "event-stream": ">=4.0.0"
   },
   "dependencies": {
     "body-parser": "^1.15.2",
